@@ -17,7 +17,7 @@ For input $i$, define an affine reward function pulling each arm (0 or 1)
 ```
 where $\epsilon_{i, 0}, \epsilon_{i, 1}$ are intrinsic noises.
 
-Further define a logistic policy determined by parameter $\gamma$
+Further, define a logistic policy determined by parameter $\gamma$
 ```math
 \pi(x) = \mathbb{P}(y = 1 \mid x)= \frac{1}{1+\text{exp}(-x^T\gamma)} \ ,
 ```
@@ -65,7 +65,8 @@ where
 W^*  = \underset{W \in \mathcal{W}}{\text{argmin }} 
 \text{CMSE}(\hat U_{W,f}, \pi)  \ ,
 ```
-and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$. \\
+and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$. 
+
 We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, [2018](https://arxiv.org/abs/1612.08321)):
 ```math
 \gamma_1 \mathfrak{B}_1^2(W, \pi_1, \|\cdot\|_{\mathcal{K}_1}) + \gamma_0 \mathfrak{B}_0^2(W, \pi_0, \|\cdot\|_{\mathcal{K}_0}) + \frac{1}{n^2} W^T \Sigma W
@@ -119,12 +120,13 @@ where
 W^*  = \underset{W \in \mathcal{W}}{\text{argmin }} 
 \text{CMSE}(\hat U_{W,f}, \pi) 
 ```
-and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$. \\
+and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$.
+
 We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, [2018](https://arxiv.org/abs/1612.08321)):
 ```math
 \gamma_1 \mathfrak{B}_1^2(W, \pi_1, \|\cdot\|_{\mathcal{K}_1}) + \gamma_0 \mathfrak{B}_0^2(W, \pi_0, \|\cdot\|_{\mathcal{K}_0}) + \frac{1}{n^2} W^T \Sigma W
 ```
-Here, $\gamma, \Sigma$ are hyperparameters of Mahalanobis kernel and $`\mathfrak{B}_t^2(W, \pi_t, \|\cdot\|_{\mathcal{K}_t})`$ measures the relative worst-case discrepancy between $f$-moments of $t$-treated group (i.e., arm $t$) and the whole sample in the ball of RKHS . We can further simplify the objective via matrix expression. 
+Here, $\gamma, \Sigma$ are hyperparameters of Mahalanobis kernel and $`\mathfrak{B}_t^2(W, \pi_t, \|\cdot\|_{\mathcal{K}_t})`$ measures the relative worst-case discrepancy between $f$-moments of $t$-treated group (i.e., arm $t$) and the whole sample in the ball of RKHS. We can further simplify the objective via matrix expression. 
 ```math
 (I_1W - \Pi_1)^TK_1(I_1W - \Pi_1) + (I_0W - \Pi_0)^TK_0(I_0W - \Pi_0) +  \frac{1}{n^2} W^T \Sigma W \ ,
 ```
