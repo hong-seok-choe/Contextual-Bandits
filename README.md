@@ -66,7 +66,7 @@ W^*  = \underset{W \in \mathcal{W}}{\text{argmin }}
 \text{CMSE}(\hat U_{W,f}, \pi)  \ ,
 ```
 and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$. \\
-We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, 2018):
+We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, [2018](https://arxiv.org/abs/1612.08321)):
 ```math
 \gamma_1 \mathfrak{B}_1^2(W, \pi_1, \|\cdot\|_{\mathcal{K}_1}) + \gamma_0 \mathfrak{B}_0^2(W, \pi_0, \|\cdot\|_{\mathcal{K}_0}) + \frac{1}{n^2} W^T \Sigma W
 ```
@@ -120,7 +120,7 @@ W^*  = \underset{W \in \mathcal{W}}{\text{argmin }}
 \text{CMSE}(\hat U_{W,f}, \pi) 
 ```
 and CMSE is the conditional mean square error of any weighted estimator from class $\mathcal{W}$. \\
-We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, 2018):
+We consider the simple case when $\delta_t$ has a Gaussian process prior with mean $f_t$ and covariance $\gamma_t \mathcal{k}_t$. Then, CMSE has a simple form (Kallus, [2018](https://arxiv.org/abs/1612.08321)):
 ```math
 \gamma_1 \mathfrak{B}_1^2(W, \pi_1, \|\cdot\|_{\mathcal{K}_1}) + \gamma_0 \mathfrak{B}_0^2(W, \pi_0, \|\cdot\|_{\mathcal{K}_0}) + \frac{1}{n^2} W^T \Sigma W
 ```
@@ -131,7 +131,7 @@ Here, $\gamma, \Sigma$ are hyperparameters of Mahalanobis kernel and $`\mathfrak
 where $\Pi_t$ is the length-$n$ vector with $\pi(y_i=t\mid x_i)$ in $i^{\text{th}}$ entry and $I_t$
 is the $n\times n$ diagonal matrix with $\mathbb{I}[y_i = t]$ in the $i^{\text{th}}$ diagonal entry. Notice that the problem is a QP and indeed solvable. 
 
-### Some Alternative Estimators (Agarwal et al. 2017)
+### Some Alternative Estimators (Agarwal et al. [2017](https://arxiv.org/pdf/1703.06180.pdf))
 6.  Balanced IPS Estimator
 ```math
 \hat U_{Bal}(\bar \pi) = \frac{1}{n} \sum_{i=1}^m\sum_{j=1}^{n_i}  \delta(x^i_j, y^i_j) \frac{\bar\pi(y^i_j \mid x^i_j)}{\pi_{avg}(y^i_j \mid x^i_j)} \ ,
